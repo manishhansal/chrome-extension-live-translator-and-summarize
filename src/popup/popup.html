@@ -1,1 +1,32 @@
-/popup/popup.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Translator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gemini Translator</h1>
+    <div class="setting">
+      <label for="live-translation-toggle">Live Translation</label>
+      <input type="checkbox" id="live-translation-toggle">
+    </div>
+    <div class="setting">
+      <label>Translation Display</label>
+      <div class="radio-group">
+        <input type="radio" id="inline" name="translation-mode" value="inline">
+        <label for="inline">Inline</label>
+        <input type="radio" id="tooltip" name="translation-mode" value="tooltip">
+        <label for="tooltip">Tooltip</label>
+      </div>
+    </div>
+    <button id="summarize-btn">Summarize Page</button>
+    <div id="summary-container" style="display:none;">
+      <h2>Summary</h2>
+      <p id="summary-text"></p>
+      <button id="copy-summary-btn">Copy Summary</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

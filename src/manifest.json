@@ -1,1 +1,33 @@
-{}
+{
+  "manifest_version": 3,
+  "name": "Gemini Real-Time Translator & Summarizer",
+  "version": "1.0",
+  "description": "Translates and summarizes web page content in real-time using the Gemini API.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "tooltip.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}

@@ -1,1 +1,18 @@
-/* tooltip.css */
+.translation-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 1000;
+  display: none;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+[data-translated]:hover .translation-tooltip {
+  display: block;
+}
